@@ -1,0 +1,141 @@
+// Font-size & Spacer
+$fs-title: 2.5rem;
+$fs-subTitle: 2rem;
+$fs-text: 1.6rem;
+$fs-subText: 1.2rem;
+$fs-default: 1rem;
+
+$spacer-sm: 0.75rem;
+$spacer-default: 1.25rem;
+$spacer-lg: 1.75rem;
+$radiusPill: 4rem;
+$radiusCircle: 50%;
+
+$content-width: 1280px;
+
+// Colors
+$blue: #1f51ff;
+$red: #eb2f06;
+$green: #228b22;
+$yellow: #ffc000;
+$white: #fff;
+$black: #000;
+$gray: #696969;
+
+//Shades
+$blue-100: lighten($blue, 20%);
+$blue-200: lighten($blue, 15%);
+$blue-300: lighten($blue, 10%);
+$blue-400: lighten($blue, 5%);
+$blue-600: darken($blue, 5%);
+$blue-700: darken($blue, 10%);
+$blue-800: darken($blue, 15%);
+$blue-900: darken($blue, 20%);
+
+$red-100: lighten($red, 20%);
+$red-200: lighten($red, 15%);
+$red-300: lighten($red, 10%);
+$red-400: lighten($red, 5%);
+$red-600: darken($red, 5%);
+$red-700: darken($red, 10%);
+$red-800: darken($red, 15%);
+$red-900: darken($red, 20%);
+
+$green-100: lighten($green, 20%);
+$green-200: lighten($green, 15%);
+$green-300: lighten($green, 10%);
+$green-400: lighten($green, 5%);
+$green-600: darken($green, 5%);
+$green-700: darken($green, 10%);
+$green-800: darken($green, 15%);
+$green-900: darken($green, 20%);
+
+$yellow-100: lighten($yellow, 20%);
+$yellow-200: lighten($yellow, 15%);
+$yellow-300: lighten($yellow, 10%);
+$yellow-400: lighten($yellow, 5%);
+$yellow-600: darken($yellow, 5%);
+$yellow-700: darken($yellow, 10%);
+$yellow-800: darken($yellow, 15%);
+$yellow-900: darken($yellow, 20%);
+
+$gray-100: lighten($gray, 20%);
+$gray-200: lighten($gray, 15%);
+$gray-300: lighten($gray, 10%);
+$gray-400: lighten($gray, 5%);
+$gray-600: darken($gray, 5%);
+$gray-700: darken($gray, 10%);
+$gray-800: darken($gray, 15%);
+$gray-900: darken($gray, 20%);
+
+// Theme Colors
+$primary: #222222e6;
+$secondary: #101010;
+$tertiary: #eb8307;
+$bg: #050505;
+$bg-light: #f2f2f2;
+
+$theme-colors: (
+  "primary": $primary,
+  "secondary": $secondary,
+  "tertiary": $tertiary,
+  "bg": $bg,
+  "bg-light": $bg-light,
+
+  "blue": $blue,
+  //   Blue shades
+  "blue-100": $blue-100,
+  "blue-200": $blue-200,
+  "blue-300": $blue-300,
+  "blue-400": $blue-400,
+  "blue-600": $blue-600,
+  "blue-700": $blue-700,
+  "blue-800": $blue-800,
+  "blue-900": $blue-900,
+
+  "red": $red,
+  //   Red shades
+  "red-100": $red-100,
+  "red-200": $red-200,
+  "red-300": $red-300,
+  "red-400": $red-400,
+  "red-600": $red-600,
+  "red-700": $red-700,
+  "red-800": $red-800,
+  "red-900": $red-900,
+
+  "green": $green,
+  //   Green shades
+  "green-100": $green-100,
+  "green-200": $green-200,
+  "green-300": $green-300,
+  "green-400": $green-400,
+  "green-600": $green-600,
+  "green-700": $green-700,
+  "green-800": $green-800,
+  "green-900": $green-900,
+
+  "yellow": $yellow,
+  //   Yellow shades
+  "yellow-100": $yellow-100,
+  "yellow-200": $yellow-200,
+  "yellow-300": $yellow-300,
+  "yellow-400": $yellow-400,
+  "yellow-600": $yellow-600,
+  "yellow-700": $yellow-700,
+  "yellow-800": $yellow-800,
+  "yellow-900": $yellow-900,
+
+  "white": $white,
+  "black": $black,
+  "gray": $gray,
+  //   Gray shades
+  "gray-100": $gray-100,
+  "gray-200": $gray-200,
+  "gray-300": $gray-300,
+  "gray-400": $gray-400,
+  "gray-600": $gray-600,
+  "gray-700": $gray-700,
+  "gray-800": $gray-800,
+  "gray-900": $gray-900,
+);

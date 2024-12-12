@@ -1,0 +1,36 @@
+// Improting fonts
+@font-face {
+  font-family: iransans;
+  font-style: normal;
+  font-weight: 500;
+  src: url(../../public/fonts/ttf/IRANSansX-Medium.ttf) format("truetype"),
+    url(../../public/fonts/woff/IRANSansX-Medium.woff) format("woff"),
+    url(../../public/fonts/eot/IRANSansX-Medium.eot?#iefix) format("eot");
+}
+
+@font-face {
+  font-family: iransans;
+  font-style: normal;
+  font-weight: normal;
+  src: url(../../public/fonts/ttf/IRANSansX-Regular.ttf) format("truetype"),
+    url(../../public/fonts/woff/IRANSansX-Regular.woff) format("woff"),
+    url(../../public/fonts/eot/IRANSansX-Regular.eot?#iefix) format("eot");
+}
+
+@font-face {
+  font-family: iransans;
+  font-style: normal;
+  font-weight: bold;
+  src: url(../../public/fonts/ttf/IRANSansX-Bold.ttf) format("truetype"),
+    url(../../public/fonts/woff/IRANSansX-Bold.woff) format("woff"),
+    url(../../public/fonts/eot/IRANSansX-Bold.eot?#iefix) format("eot");
+}
+
+@font-face {
+  font-family: farsidigit;
+  font-style: normal;
+  font-weight: normal;
+  src: url(../../public/fonts/ttf/Tanha-FD-WOL.ttf) format("truetype"),
+    url(../../public/fonts/woff/Tanha-FD-WOL.woff) format("woff"),
+    url(../../public/fonts/eot/Tanha-FD-WOL.eot?#iefix) format("eot");
+}

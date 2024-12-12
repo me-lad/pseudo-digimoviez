@@ -1,0 +1,136 @@
+body {
+  &.light-mode {
+    background-color: $bg-light !important;
+    & .body-loading {
+      background-color: lighten($primary, 20);
+    }
+
+    & .header__top-themeChanger + div {
+      & > img {
+        &:first-child {
+          display: none !important;
+        }
+        &:last-child {
+          display: block !important;
+        }
+      }
+    }
+    & .header__top-user a {
+      background-color: #c1d0b5;
+      color: $black !important;
+    }
+
+    & .slider__item-insider > img {
+      opacity: 0.75;
+      filter: drop-shadow(0 0 1px $black);
+    }
+
+    & .header__top-themeChanger,
+    & .header__bottom,
+    & .header__bottom h4:not(.sideMenu-item),
+    & .advance-search__content {
+      background-color: #c1d0b5 !important;
+      color: $black !important;
+    }
+
+    & .header__bottom-search,
+    & .header__bottom-search > input {
+      background-color: $bg-light !important;
+      color: $black !important;
+    }
+
+    & .advance-search__content-logo,
+    & .advance-search__content-select-item select,
+    & .advance-search__content-select-item input,
+    & .advance-search__content-range-progress,
+    & #filter-mediatype-button {
+      background-color: darken(#c1d0b5, 10) !important;
+      color: $black !important;
+    }
+
+    & #filter-mediatype-button > button {
+      color: $black;
+      &.active {
+        color: $white;
+      }
+    }
+
+    .advance-search__content-select-item span {
+      color: $black;
+    }
+
+    & .advance-search__content-range span.text-white {
+      color: $black !important;
+    }
+
+    & .content-base__movies-item,
+    & .content-base__series > div {
+      background-color: #c1d0b5 !important;
+    }
+
+    & .content-base__series h2 {
+      color: $black !important;
+    }
+
+    & .content-base__movies-item {
+      & svg.bg_crev {
+        fill: $bg-light;
+      }
+
+      & span,
+      & h2,
+      & p {
+        color: $black !important;
+      }
+
+      & .content-base__movies-trailer {
+        background-color: $white !important;
+        color: $black !important;
+
+        & > div:first-child {
+          background-color: darken(#c1d0b5, 5);
+        }
+      }
+    }
+
+    & .content-base__series-item {
+      & h3 {
+        background-color: darken(#c1d0b5, 5) !important;
+        color: $black !important;
+      }
+
+      & span {
+        color: $black !important;
+      }
+    }
+
+    & #content-pagination {
+      & ul {
+        --bs-pagination-active-border-color: $secondary;
+      }
+
+      & .page-link {
+        color: $black;
+        &.disabled {
+          color: lighten($black, 40);
+        }
+        &.active {
+          background-color: #c1d0b5;
+        }
+      }
+
+      & #pagination-input {
+        & input {
+          color: $black;
+          border-color: $black;
+          background-color: #c1d0b5;
+        }
+        & button {
+          background-color: #c1d0b5;
+          color: $black;
+          border-color: $black;
+        }
+      }
+    }
+  }
+}

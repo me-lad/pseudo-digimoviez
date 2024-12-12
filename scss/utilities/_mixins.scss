@@ -1,0 +1,72 @@
+// Default Mixins
+@mixin displayFlex($justify: center, $align: center) {
+  display: flex;
+  justify-content: $justify;
+  align-items: $align;
+}
+
+@mixin transitionDefault($duration: 180ms, $timing-function: ease-in) {
+  transition: all $duration $timing-function;
+}
+
+@mixin positionCenter() {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+}
+
+@mixin textBreakkit($line: 2) {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: $line;
+  overflow: hidden;
+}
+
+// Responsive Mixins
+
+// 0-576px = phone
+// 576px-768px = phone landscape
+// 768px-992px = tablet
+// 992px-1200px =  tablet landscape
+// 1200px-1400px = laptop
+// 1400px <  = big desktop
+
+@mixin responsive($breakPoint) {
+  // Sm BreakPoint 576px ~ 575.98px
+  @if $breakPoint == phone {
+    @media screen and (max-width: 35.99875em) {
+      @content;
+    }
+  }
+
+  // Md BreakPoint 768px ~ 767.98px
+  @if $breakPoint == phoneL {
+    @media screen and(max-width: 47.99875em) {
+      @content;
+    }
+  }
+
+  // Lg BreakPoint 992px ~ 991.98px
+  @if $breakPoint == tablet {
+    @media screen and (max-width: 61.99875em) {
+      @content;
+    }
+  }
+
+  // xLg BreakPoint 1200px ~ 1199.98px
+  @if $breakPoint == tabletL {
+    @media screen and (max-width: 74.99875em) {
+      @content;
+    }
+  }
+
+  // xxLg BreakPoint 1400px ~ 1399.98px
+  @if $breakPoint == laptop {
+    @media screen and (max-width: 87.49875em) {
+      @content;
+    }
+  }
+}
