@@ -7,6 +7,7 @@ import { Theme } from "../App/Theme.js";
 export class Base {
   constructor() {
     this.setApiHeader();
+    this.showFirstMessage();
     this.data = new DataManager();
     this.advanceSearch = new AdvanceSearch();
     this.theme = new Theme();
@@ -17,5 +18,19 @@ export class Base {
     axios.defaults.headers.common["accept"] = "application/json";
     axios.defaults.headers.common["Authorization"] =
       "Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI4MmQzN2Q0NDFlNDNjNDBmMTg3MzNiYzI1NTA2MjAwNiIsIm5iZiI6MTcyMjYxNDIzNS43NzIzNDcsInN1YiI6IjY2YWNmZWZlNWFlNjk0NDVjN2NkODRhMiIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.hKEo1l_TXQQiK8_nqilFpGSv1Ygi5hlhwHfSua-PabU";
+  }
+
+  //! Showing the custom message on the first loading
+  showFirstMessage() {
+    const message = document.querySelector(".first-loading");
+    const hasAlreadyLoad = localStorage.getItem("hasAlreadyLoad");
+    if (!!hasAlreadyLoad) {
+      return;
+    }
+    localStorage.setItem("hasAlreadyLoad", true);
+    message.classList.remove("hidden");
+    setTimeout(() => {
+      message.classList.add("hidden");
+    }, 3000);
   }
 }
