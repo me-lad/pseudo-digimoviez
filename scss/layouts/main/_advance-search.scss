@@ -1,0 +1,123 @@
+// Advance search styles
+.advance-search {
+  &__content {
+    background-color: $primary;
+    border-radius: $spacer-sm;
+    overflow: hidden;
+    min-height: 225px;
+    &-logo {
+      background-color: darken($primary, 5);
+      @include displayFlex();
+    }
+    &-select {
+      &-item {
+        @include displayFlex(space-between);
+        & > div {
+          @include displayFlex();
+          &:nth-child(1) {
+            width: 28%;
+          }
+          &:nth-child(2) {
+            width: 70%;
+          }
+        }
+        & span {
+          color: $white;
+          font-size: $fs-text;
+        }
+        & button {
+          color: $white;
+          @include responsive(phoneL) {
+            width: 50%;
+          }
+          &.active {
+            color: $tertiary;
+          }
+        }
+        & input {
+          width: 100%;
+          background-color: $secondary;
+          border-radius: $radiusPill;
+          font-size: $fs-subText;
+          color: $gray;
+          outline: none;
+          border: none;
+          padding: $spacer-sm $spacer-default;
+        }
+        & select {
+          width: 100%;
+          background-color: $secondary;
+          border: none;
+          border-radius: $radiusPill;
+          color: $gray-200;
+          font-size: $fs-text;
+          padding: $spacer-sm $spacer-default;
+        }
+      }
+    }
+    &-switch {
+      height: 100%;
+      width: 49.5%;
+      font-size: $fs-subText;
+      color: $white;
+      cursor: pointer;
+      @include displayFlex();
+      &.active {
+        background-color: $secondary;
+      }
+    }
+    &-left {
+      & button {
+        width: 100%;
+        padding: $spacer-sm 0;
+        border-radius: $spacer-sm;
+        background-color: $tertiary;
+        color: $secondary;
+        font-weight: bold;
+        font-size: $fs-text;
+        border: none;
+        margin-top: 3rem;
+        @include transitionDefault();
+        &:hover {
+          cursor: pointer;
+          transform: translateY(-3px);
+        }
+      }
+    }
+    &-range {
+      display: flex;
+      flex-direction: column;
+      row-gap: $spacer-lg;
+      &-progress {
+        width: 100%;
+        height: 7.5px;
+        border-radius: $spacer-default;
+        background-color: darken($secondary, 5);
+        direction: ltr;
+        position: absolute;
+      }
+      &-thumb {
+        width: 15px;
+        height: 15px;
+        background-color: $tertiary;
+        border-radius: 0.2rem;
+        transform: rotate(45deg);
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        margin: auto 0;
+        cursor: pointer;
+        &.min {
+          left: 0;
+        }
+        &.max {
+          left: 100%;
+        }
+      }
+    }
+    &-values {
+      font-family: "farsidigit", sans-serif;
+      direction: rtl;
+    }
+  }
+}

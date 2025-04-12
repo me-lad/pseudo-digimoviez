@@ -1,0 +1,52 @@
+// Custom-Class
+.f-center {
+  @include displayFlex();
+}
+
+.pos-c {
+  @include positionCenter();
+}
+
+.my-transition {
+  @include transitionDefault();
+}
+
+.textBreakkit-1 {
+  @include textBreakkit(1);
+}
+
+.textBreakkit-2 {
+  @include textBreakkit(2);
+}
+
+.textBreakkit-3 {
+  @include textBreakkit(3);
+}
+
+.textBreakkit-4 {
+  @include textBreakkit(4);
+}
+
+.text-justify {
+  text-align: justify;
+}
+
+.fSize-26 {
+  font-size: $fs-title;
+}
+
+.fSize-22 {
+  font-size: $fs-subTitle;
+}
+
+.fSize-18 {
+  font-size: $fs-text;
+}
+
+.fSize-14 {
+  font-size: $fs-subText;
+}
+
+.fSize-10 {
+  font-size: $fs-default;
+}

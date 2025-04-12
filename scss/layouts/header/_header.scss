@@ -1,0 +1,116 @@
+// Header styles
+.header {
+  &__top {
+    &-user {
+      @include responsive(phone) {
+        flex-wrap: wrap;
+        max-width: 100%;
+      }
+      & > a {
+        gap: $spacer-sm;
+        color: $white !important;
+        background-color: $primary;
+        padding: $spacer-sm $spacer-lg;
+        font-size: $fs-subText;
+        font-weight: bold;
+        border-radius: $radiusPill;
+        @include displayFlex();
+        @include transitionDefault();
+        &:hover {
+          background-color: $tertiary !important;
+          cursor: pointer;
+        }
+      }
+    }
+    &-themeChanger {
+      background-color: $primary;
+      padding: $spacer-sm $spacer-lg;
+      border-radius: $radiusPill;
+      gap: $spacer-default;
+      position: relative;
+      cursor: pointer;
+      @include displayFlex();
+      & > svg {
+        &:nth-child(1) {
+          color: $yellow;
+        }
+        &:nth-child(2) {
+          color: $tertiary;
+        }
+        font-size: $fs-title;
+      }
+      &-switch {
+        position: absolute;
+        width: 33px;
+        height: 33px;
+        background-color: $white;
+        border-radius: $radiusCircle;
+        left: 11%;
+        @include transitionDefault(0.6s, ease);
+      }
+    }
+  }
+  &__bottom {
+    &-item {
+      & > a {
+        gap: $spacer-default;
+        cursor: pointer;
+        @include displayFlex(flex-end);
+      }
+      & svg {
+        color: $tertiary;
+        font-size: $fs-subTitle;
+      }
+      & h4 {
+        color: $white;
+        @include displayFlex();
+        flex-direction: column;
+        gap: $spacer-sm;
+      }
+      & small {
+        color: $tertiary;
+      }
+    }
+    &-sideMenu {
+      position: fixed;
+      z-index: 100;
+      top: 0;
+      right: -100%;
+      visibility: hidden;
+      background-color: $primary;
+      width: 47.5dvw;
+      height: 100dvh;
+      @include responsive(phone) {
+        width: 80dvw;
+      }
+    }
+    &-sideMenuCloser {
+      width: 23px;
+      height: 23px;
+      cursor: pointer;
+      padding: 0.25rem;
+      background-color: $tertiary;
+      color: $white;
+      border-radius: $radiusCircle;
+      position: absolute;
+      top: 2%;
+      left: 2%;
+      @include displayFlex();
+    }
+    &-search {
+      & > div {
+        background-color: lighten($secondary, 4);
+      }
+      &-item:not(.header__search-content-item:first-child) {
+        border-top: 1px solid white;
+      }
+      &-loading {
+        display: none;
+      }
+      &-watchAll {
+        display: none;
+        cursor: pointer;
+      }
+    }
+  }
+}

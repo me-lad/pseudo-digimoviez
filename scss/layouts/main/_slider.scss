@@ -1,0 +1,159 @@
+// Slider styles
+.slider {
+  direction: ltr;
+  overflow: hidden;
+  &__item {
+    position: relative;
+    max-width: 700px;
+    height: 450px;
+    overflow: hidden;
+    cursor: pointer;
+    visibility: hidden;
+    @include displayFlex();
+    @include responsive(laptop) {
+      max-width: 640px;
+    }
+    @include responsive(tablet) {
+      max-width: 540px;
+    }
+    @include responsive(phoneL) {
+      max-width: 520px;
+    }
+    @include responsive(phone) {
+      max-width: 300px;
+      height: fit-content;
+      & > img {
+        display: none;
+      }
+      & .slider__item-description {
+        display: none;
+      }
+      & .slider__item-insider {
+        display: block;
+        & > img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+      }
+    }
+    &-image {
+      max-width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: $spacer-default;
+    }
+    &-description {
+      position: absolute;
+      left: 2rem;
+      bottom: 1.25rem;
+    }
+    &-rate {
+      @include displayFlex(center, flex-start);
+      flex-direction: column-reverse;
+      & > svg {
+        max-width: 46px;
+        max-height: 23px;
+      }
+      & span {
+        color: $white;
+        font-size: $fs-text;
+      }
+      & strong {
+        color: $tertiary;
+        font-size: $fs-subTitle;
+      }
+    }
+    &-name {
+      font-size: $fs-subTitle;
+      color: $white;
+      margin-top: $spacer-default;
+    }
+    &-insider {
+      width: 300px;
+      height: 440px;
+      display: none;
+      & > img {
+        opacity: 0.5;
+        object-fit: cover;
+      }
+    }
+    &.swiper-slide-active {
+      border: 1px solid $white;
+      border-radius: $spacer-default;
+      visibility: visible;
+      &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.1);
+        border-radius: $spacer-default;
+        box-shadow: inset 0 -250px 80px -10px rgba(0, 0, 0, 0.6);
+      }
+      @include responsive(phone) {
+        & img {
+          opacity: 1 !important;
+        }
+      }
+    }
+    &.swiper-slide-prev {
+      justify-content: flex-end;
+      padding-right: 120px;
+      visibility: visible;
+      & > img {
+        display: none;
+      }
+      & .slider__item-description {
+        display: none;
+      }
+      & .slider__item-insider {
+        display: block;
+      }
+      @include responsive(phone) {
+        padding-right: 80px;
+      }
+    }
+    &.swiper-slide-next {
+      justify-content: flex-start;
+      padding-left: 120px;
+      visibility: visible;
+      & > img {
+        display: none;
+      }
+      & .slider__item-description {
+        display: none;
+      }
+      & .slider__item-insider {
+        display: block;
+      }
+      @include responsive(phone) {
+        padding-left: 80px;
+      }
+    }
+  }
+  &__button {
+    width: 46px;
+    height: 46px;
+    border-radius: $radiusCircle;
+    background-color: $primary;
+    color: $white;
+    @include transitionDefault();
+    @include displayFlex();
+    &::after {
+      font-size: $fs-text;
+      font-weight: bold;
+    }
+    &:hover {
+      cursor: pointer;
+      background-color: darken($primary, 5);
+    }
+  }
+}
+
+// Override styles
+.swiper-slide-shadow-coverflow {
+  display: none;
+}
